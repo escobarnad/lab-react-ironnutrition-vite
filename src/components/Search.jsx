@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Input } from "antd";
 
 function Search({ foods, setFoods }) {
   const [searchWord, setSearchWord] = useState("");
@@ -21,7 +22,7 @@ function Search({ foods, setFoods }) {
     <form>
       <label>
         Search
-        <input type="text" value={searchWord} onChange={handleChange} />
+        <Input type="text" value={searchWord} onChange={handleChange} />
         {foods.length === 0 ? (
           <h4>Oops! There is no more content to show.</h4>
         ) : (
